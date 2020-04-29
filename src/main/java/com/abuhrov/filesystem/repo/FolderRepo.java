@@ -7,6 +7,4 @@ import org.springframework.data.jpa.repository.Query;
 public interface FolderRepo extends JpaRepository<Folder, Long> {
     @Query("from Folder where name = '$ROOT$'")
     Folder findRoot();
-
-    Folder findByName(String name);
 }
